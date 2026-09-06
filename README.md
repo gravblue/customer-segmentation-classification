@@ -4,7 +4,7 @@ Proyek machine learning end-to-end pada dataset transaksi bank, mulai dari segme
 
 ## 📊 Dataset
 
-**2.512 data transaksi bank** dengan atribut yang mencakup detail transaksi, demografi nasabah, dan pola penggunaan (jumlah transaksi, tipe transaksi, channel, usia nasabah, pekerjaan, saldo akun, jumlah percobaan login, dll). Cocok untuk kasus deteksi fraud dan identifikasi anomali.
+2.512 data transaksi bank dengan atribut yang mencakup detail transaksi, demografi nasabah, dan pola penggunaan (jumlah transaksi, tipe transaksi, channel, usia nasabah, pekerjaan, saldo akun, jumlah percobaan login, dll). Cocok untuk kasus deteksi fraud dan identifikasi anomali.
 
 ## 1️⃣ Clustering
 
