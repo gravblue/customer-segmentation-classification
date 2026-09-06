@@ -21,10 +21,12 @@ Proyek machine learning end-to-end pada dataset transaksi bank, mulai dari segme
 - **Interpretasi** = analisis karakteristik tiap cluster pada data yang masih di-scale maupun yang sudah di-inverse (skala asli)
 
 **Hasil:** dua segmen nasabah yang berbeda, segmen dengan saldo lebih stabil dan durasi transaksi lebih lama, versus segmen dengan pola transaksi lebih cepat dan dinamis.
+- Label 0 = Nasabah Profesional dengan Aktivitas Stabil, dan 
+- Label 1 = Nasabah Muda dengan Pola Transaksi Lebih Dinamis 
 
 ## 2️⃣ Klasifikasi
 
-**Tujuan:** memprediksi label cluster (`Target`) hasil clustering di atas menggunakan model supervised, sehingga hasil segmentasi unsupervised bisa dipakai ulang sebagai classifier.
+**Tujuan:** membangun model yang dapat mengklasifikasikan nasabah baru ke dalam segmen/cluster yang telah didefinisikan sebelumnya (hasil clustering).
 
 **Alur pengerjaan:**
 - Memuat data hasil inverse transform dari tahap clustering, lalu melakukan One-Hot Encoding pada fitur kategorikal
@@ -33,8 +35,9 @@ Proyek machine learning end-to-end pada dataset transaksi bank, mulai dari segme
 - **Perbandingan model** = menambahkan `RandomForestClassifier` dan `LogisticRegression`
 - **Hyperparameter tuning** = `GridSearchCV` (5-fold CV) pada Random Forest dan Logistic Regression
 
-**Hasil (data uji):**
+**Hasil:** model klasifikasi berhasil mempelajari pola pengelompokan yang dihasilkan oleh KMeans dengan akurasi tinggi, sehingga dapat digunakan untuk mengklasifikasikan nasabah baru ke dalam segmen yang telah ditentukan tanpa perlu menjalankan ulang proses clustering.
 
+**Hasil (data uji):**
 | Model | Accuracy | Precision | Recall | F1-Score |
 |---|---|---|---|---|
 | Decision Tree | 1.00 | 1.00 | 1.00 | 1.00 |
