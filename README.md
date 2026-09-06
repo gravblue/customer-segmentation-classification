@@ -28,10 +28,10 @@ Proyek machine learning end-to-end pada dataset transaksi bank, mulai dari segme
 
 **Alur pengerjaan:**
 - Memuat data hasil inverse transform dari tahap clustering, lalu melakukan One-Hot Encoding pada fitur kategorikal
-- **Data splitting** — pembagian data latih/uji 80/20 (1.556 data latih / 389 data uji)
-- **Model dasar** — `DecisionTreeClassifier`
-- **Perbandingan model** — menambahkan `RandomForestClassifier` dan `LogisticRegression`
-- **Hyperparameter tuning** — `GridSearchCV` (5-fold CV) pada Random Forest dan Logistic Regression
+- **Data splitting** = pembagian data latih/uji 80/20 (1.556 data latih / 389 data uji)
+- **Model dasar** = `DecisionTreeClassifier`
+- **Perbandingan model** = menambahkan `RandomForestClassifier` dan `LogisticRegression`
+- **Hyperparameter tuning** = `GridSearchCV` (5-fold CV) pada Random Forest dan Logistic Regression
 
 **Hasil (data uji):**
 
@@ -41,7 +41,6 @@ Proyek machine learning end-to-end pada dataset transaksi bank, mulai dari segme
 | Random Forest | 1.00 | 1.00 | 1.00 | 1.00 |
 | Logistic Regression | 0.99 | 0.99 | 0.99 | 0.99 |
 | Random Forest (tuned) | 1.00 | 1.00 | 1.00 | 1.00 |
-| Logistic Regression (tuned) | — | — | — | — |
 
 
 ## 🛠️ Tools & Library
