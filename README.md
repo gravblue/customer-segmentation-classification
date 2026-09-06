@@ -11,16 +11,16 @@ Proyek machine learning end-to-end pada dataset transaksi bank, mulai dari segme
 **Tujuan:** mengelompokkan nasabah berdasarkan perilaku transaksi dan demografi tanpa label yang ditentukan sebelumnya.
 
 **Alur pengerjaan:**
-- **EDA** — heatmap korelasi, histogram distribusi, dan boxplot (nilai transaksi berdasarkan pekerjaan)
-- **Pembersihan data** — menangani missing value dan data duplikat, drop kolom id/address/date
-- **Pra-pemrosesan** — encoding fitur kategorikal dengan `LabelEncoder`, penanganan outlier dengan metode IQR, feature scaling dengan `StandardScaler`, dan binning usia
-- **Penentuan jumlah cluster** — Elbow Method dengan `KElbowVisualizer` (metrik silhouette)
-- **Clustering** — `KMeans` (k = 2)
-- **Evaluasi** — Silhouette Score: **0,57**
-- **Visualisasi** — proyeksi 2D hasil cluster menggunakan PCA
-- **Interpretasi** — analisis karakteristik tiap cluster pada data yang masih di-scale maupun yang sudah di-inverse (skala asli)
+- **EDA** = heatmap korelasi, histogram distribusi, dan boxplot (nilai transaksi berdasarkan pekerjaan)
+- **Pembersihan data** = menangani missing value dan data duplikat, drop kolom id/address/date
+- **Pra-pemrosesan** = encoding fitur kategorikal dengan `LabelEncoder`, penanganan outlier dengan metode IQR, feature scaling dengan `StandardScaler`, dan binning usia
+- **Penentuan jumlah cluster** = Elbow Method dengan `KElbowVisualizer` (metrik silhouette)
+- **Clustering** = `KMeans` (k = 2)
+- **Evaluasi** = Silhouette Score: **0,57**
+- **Visualisasi** = proyeksi 2D hasil cluster menggunakan PCA
+- **Interpretasi** = analisis karakteristik tiap cluster pada data yang masih di-scale maupun yang sudah di-inverse (skala asli)
 
-**Hasil:** dua segmen nasabah yang berbeda — segmen dengan saldo lebih stabil dan durasi transaksi lebih lama, versus segmen dengan pola transaksi lebih cepat dan dinamis.
+**Hasil:** dua segmen nasabah yang berbeda, segmen dengan saldo lebih stabil dan durasi transaksi lebih lama, versus segmen dengan pola transaksi lebih cepat dan dinamis.
 
 ## 2️⃣ Klasifikasi
 
