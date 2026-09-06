@@ -21,8 +21,8 @@ Proyek machine learning end-to-end pada dataset transaksi bank, mulai dari segme
 - **Interpretasi** = analisis karakteristik tiap cluster pada data yang masih di-scale maupun yang sudah di-inverse (skala asli)
 
 **Hasil:** dua segmen nasabah yang berbeda, segmen dengan saldo lebih stabil dan durasi transaksi lebih lama, versus segmen dengan pola transaksi lebih cepat dan dinamis.
-- Label 0 = Nasabah Profesional dengan Aktivitas Stabil, dan 
-- Label 1 = Nasabah Muda dengan Pola Transaksi Lebih Dinamis 
+- **Label 0** = Nasabah Profesional dengan Aktivitas Stabil, dan 
+- **Label 1** = Nasabah Muda dengan Pola Transaksi Lebih Dinamis 
 
 ## 2️⃣ Klasifikasi
 
