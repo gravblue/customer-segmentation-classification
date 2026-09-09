@@ -11,18 +11,18 @@ Proyek machine learning end-to-end pada dataset transaksi bank, mulai dari segme
 **Tujuan:** mengelompokkan nasabah berdasarkan perilaku transaksi dan demografi tanpa label yang ditentukan sebelumnya.
 
 **Alur pengerjaan:**
-- **EDA** = heatmap korelasi, histogram distribusi, dan boxplot (nilai transaksi berdasarkan pekerjaan)
-- **Pembersihan data** = menangani missing value dan data duplikat, drop kolom id/address/date
-- **Pra-pemrosesan** = encoding fitur kategorikal dengan `LabelEncoder`, penanganan outlier dengan metode IQR, feature scaling dengan `StandardScaler`, dan binning usia
-- **Penentuan jumlah cluster** = Elbow Method dengan `KElbowVisualizer` (metrik silhouette)
-- **Clustering** = `KMeans` (k = 2)
-- **Evaluasi** = Silhouette Score: **0,57**
-- **Visualisasi** = proyeksi 2D hasil cluster menggunakan PCA
-- **Interpretasi** = analisis karakteristik tiap cluster pada data yang masih di-scale maupun yang sudah di-inverse (skala asli)
+- **EDA**: heatmap korelasi, histogram distribusi, dan boxplot (nilai transaksi berdasarkan pekerjaan)
+- **Pembersihan data**: menangani missing value dan data duplikat, drop kolom id/address/date
+- **Pra-pemrosesan**: encoding fitur kategorikal dengan `LabelEncoder`, penanganan outlier dengan metode IQR, feature scaling dengan `StandardScaler`, dan binning usia
+- **Penentuan jumlah cluster**: Elbow Method dengan `KElbowVisualizer` (metrik silhouette)
+- **Clustering**: `KMeans` (k = 2)
+- **Evaluasi**: Silhouette Score: **0,57**
+- **Visualisasi**: proyeksi 2D hasil cluster menggunakan PCA
+- **Interpretasi**: analisis karakteristik tiap cluster pada data yang masih di-scale maupun yang sudah di-inverse (skala asli)
 
 **Hasil:** dua segmen nasabah yang berbeda, segmen dengan saldo lebih stabil dan durasi transaksi lebih lama, versus segmen dengan pola transaksi lebih cepat dan dinamis.
-- **Label 0** = Nasabah Profesional dengan Aktivitas Stabil, dan 
-- **Label 1** = Nasabah Muda dengan Pola Transaksi Lebih Dinamis 
+- **Label 0**: Nasabah Profesional dengan Aktivitas Stabil, dan 
+- **Label 1**: Nasabah Muda dengan Pola Transaksi Lebih Dinamis 
 
 ## 2️⃣ Klasifikasi
 
@@ -30,10 +30,10 @@ Proyek machine learning end-to-end pada dataset transaksi bank, mulai dari segme
 
 **Alur pengerjaan:**
 - Memuat data hasil inverse transform dari tahap clustering, lalu melakukan One-Hot Encoding pada fitur kategorikal
-- **Data splitting** = pembagian data latih/uji 80/20 (1.556 data latih / 389 data uji)
-- **Model dasar** = `DecisionTreeClassifier`
-- **Perbandingan model** = menambahkan `RandomForestClassifier` dan `LogisticRegression`
-- **Hyperparameter tuning** = `GridSearchCV` (5-fold CV) pada Random Forest dan Logistic Regression
+- **Data splitting**: pembagian data latih/uji 80/20 (1.556 data latih / 389 data uji)
+- **Model dasar**: `DecisionTreeClassifier`
+- **Perbandingan model**: menambahkan `RandomForestClassifier` dan `LogisticRegression`
+- **Hyperparameter tuning**: `GridSearchCV` (5-fold CV) pada Random Forest dan Logistic Regression
 
 **Hasil:** model klasifikasi berhasil mempelajari pola pengelompokan yang dihasilkan oleh KMeans dengan akurasi tinggi, sehingga dapat digunakan untuk mengklasifikasikan nasabah baru ke dalam segmen yang telah ditentukan tanpa perlu menjalankan ulang proses clustering.
 
